@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace GraphQL {
@@ -15,21 +14,15 @@ namespace GraphQL {
         }
 
         public T Get<T> (string key) {
-            return GetData()[key];
+            return GetData()[key].ToObject<T>();
         }
 
         public List<T> GetList<T> (string key) {
             return Get<JArray>(key).ToObject<List<T>>();
         }
 
-        private dynamic GetData () {
-            if (data == null) return null;
-
-            try {
-                return JsonConvert.DeserializeObject<dynamic>(data["data"].ToString());
-            } catch {
-                return null;
-            }
+        private JObject GetData () {
+            return data == null ? null : JObject.Parse(data["data"].ToString());
         }
     }
 }
