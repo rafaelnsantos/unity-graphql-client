@@ -3,9 +3,9 @@ using Newtonsoft.Json.Linq;
 
 namespace GraphQL {
     public class GraphQLResponse {
-        public string Raw { get; }
+        public string Raw { get; private set; }
         private readonly JObject data;
-        public string Exception { get; }
+        public string Exception { get; private set; }
 
         public GraphQLResponse (string text, string ex = null) {
             Exception = ex;

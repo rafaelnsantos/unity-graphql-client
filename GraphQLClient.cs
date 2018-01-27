@@ -45,7 +45,7 @@ namespace GraphQL {
                 yield return www.Send();
 
                 if (www.isNetworkError) {
-                    callback?.Invoke(new GraphQLResponse("", www.error));
+                    if (callback != null) callback(new GraphQLResponse("", www.error));
                     yield break;
                 }
 
@@ -53,7 +53,7 @@ namespace GraphQL {
 
                 var result = new GraphQLResponse(responseString);
 
-                callback?.Invoke(result);
+                if (callback != null) callback(result);
             }
 
             request.Dispose();
