@@ -4,7 +4,7 @@ Here is a sample client I made for a Unity app that utilizes a GraphQL api.
 I based my code on these sources:
 
 - [bkniffler/graphql-net-client](https://github.com/bkniffler/graphql-net-client)
-- [Newtonsoft.Json 11.0.1-beta3](https://www-0.nuget.org/packages/Newtonsoft.Json/11.0.1-beta3)
+- [SaladLab/Json.Net.Unity3D (release 9.0.1)](https://github.com/SaladLab/Json.Net.Unity3D)
 - [carlflor/unity_graphql_client](https://github.com/carlflor/unity_graphql_client)
 - [Coroutiner from facebookarchive/friendsmash-unity](https://github.com/facebookarchive/friendsmash-unity/blob/master/friendsmash/Assets/Scripts/GameScripts/Coroutiner.cs)
 
