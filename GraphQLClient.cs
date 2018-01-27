@@ -31,7 +31,7 @@ namespace GraphQL {
 
             request.uploadHandler = new UploadHandlerRaw(payload);
             request.SetRequestHeader("Content-Type", "application/json");
-            if (token != null) request.SetRequestHeader("token", token);
+            if (token != null) request.SetRequestHeader("Authorization", "Bearer " + token);
 
             return request;
         }
