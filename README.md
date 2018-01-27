@@ -79,4 +79,4 @@ public class Scores : MonoBehaviour {
   }
 ```
 
-*For any clarification or comment, feel free to get in touch with me! :)*
+*Issues are welcome! :)*
